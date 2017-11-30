@@ -54,6 +54,16 @@ class DatabaseUserProvider extends Provider
             new EloquentUserProvider($hasher, $model)
         );
     }
+    
+     /**
+     * Return the model.
+     *
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+    public function getModel()
+    {
+        return $this->model;
+    }
 
     /**
      * {@inheritdoc}
